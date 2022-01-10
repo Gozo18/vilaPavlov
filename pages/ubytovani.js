@@ -1,4 +1,5 @@
 import { FaBath, FaBed, FaUtensils, FaWifi, FaBicycle } from "react-icons/fa";
+import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import SimpleSlider from "../components/slick/slider";
 import styles from "../styles/ubytovani.module.scss";
@@ -94,24 +95,7 @@ export default function ubytovani() {
       </div>
       <div className={styles.container}>
         <h2>KONTAKTUJTE NÁS!</h2>
-        <div className={styles.addressBox}>
-          <p>Neváhejte nám napsat nebo zavolat.</p>
-          <h3>vilaPavlov</h3>
-          <p>Zahradní 287</p>
-          <p>Pavlov, 692 01</p>
-        </div>
-        <div className={styles.contactsBox}>
-          <div>Telefon:</div>
-          <a href='tel:+420602172230'>+420 602 172 230</a>
-        </div>
-        <div className={styles.contactsBox}>
-          <div>Telefon:</div>
-          <a href='tel:+420723284232'>+420 723 284 232</a>
-        </div>
-        <div className={styles.contactsBox}>
-          <div>E-mail:</div>
-          <a href='mailto:jelinek82@gmail.com'>jelinek82@gmail.com</a>
-        </div>
+        <ContactForm />
         <div className={styles.space}></div>
       </div>
     </Layout>
