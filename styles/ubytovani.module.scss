@@ -5,6 +5,10 @@
   padding: 4vh 7%;
   background-color: $bg;
 
+  @media (min-width: $md) {
+    padding: 4vh 10%;
+  }
+
   h1 {
     margin: 0;
     font-family: "Kaushan Script", cursive;
