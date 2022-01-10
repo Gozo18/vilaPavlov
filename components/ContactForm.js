@@ -114,67 +114,85 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className={styles.form}>
         <p>Pošlete nám Váš dotaz</p>
 
-        <label htmlFor='fullname'>
-          Jméno<span>*</span>
-        </label>
-        <input
-          type='text'
-          value={fullname}
-          onChange={(e) => {
-            setFullname(e.target.value);
-          }}
-          name='fullname'
-        />
-        {errors?.fullname && <p>Prosím, vyplňte!</p>}
+        <div className={styles.formLine}>
+          <label htmlFor='fullname'>
+            Jméno<span>*</span>
+          </label>
+          <input
+            type='text'
+            value={fullname}
+            onChange={(e) => {
+              setFullname(e.target.value);
+            }}
+            name='fullname'
+          />
+          {errors?.fullname && (
+            <div className={styles.emptyError}>Prosím, vyplňte!</div>
+          )}
+        </div>
 
-        <label htmlFor='email'>
-          E-mail<span>*</span>
-        </label>
-        <input
-          type='email'
-          name='email'
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
-        {errors?.email && <p>Prosím, vyplňte!</p>}
+        <div className={styles.formLine}>
+          <label htmlFor='email'>
+            E-mail<span>*</span>
+          </label>
+          <input
+            type='email'
+            name='email'
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+          {errors?.email && (
+            <div className={styles.emptyError}>Prosím, vyplňte!</div>
+          )}
+        </div>
 
-        <label htmlFor='subject'>
-          Předmět<span>*</span>
-        </label>
-        <input
-          type='text'
-          name='subject'
-          value={subject}
-          onChange={(e) => {
-            setSubject(e.target.value);
-          }}
-        />
-        {errors?.subject && <p>Prosím, vyplňte!</p>}
+        <div className={styles.formLine}>
+          <label htmlFor='subject'>
+            Předmět<span>*</span>
+          </label>
+          <input
+            type='text'
+            name='subject'
+            value={subject}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
+          />
+          {errors?.subject && (
+            <div className={styles.emptyError}>Prosím, vyplňte!</div>
+          )}
+        </div>
 
-        <label htmlFor='message'>
-          Váš vzkaz<span>*</span>
-        </label>
-        <textarea
-          name='message'
-          value={message}
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-        ></textarea>
-        {errors?.message && <p>Prosím, vyplňte!</p>}
+        <div className={styles.formLine}>
+          <label htmlFor='message'>
+            Váš vzkaz<span>*</span>
+          </label>
+          <textarea
+            name='message'
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          ></textarea>
+          {errors?.message && (
+            <div className={styles.emptyError}>Prosím, vyplňte!</div>
+          )}
+        </div>
 
         <button type='submit'>{buttonText}</button>
 
         <div className='text-left'>
           {showSuccessMessage && (
-            <p className='text-green-500 font-semibold text-sm my-2'>
-              Děkujeme! E-mail odeslán.
-            </p>
+            <div className={styles.sendingSuccess}>
+              Děkujeme, e-mail byl odeslán.
+            </div>
           )}
           {showFailureMessage && (
-            <p className='text-red-500'>Něco se pokazilo. Zkuste to znovu!</p>
+            <div className={styles.sendingError}>
+              Něco se pokazilo. Zkuste to znovu!
+            </div>
           )}
         </div>
       </form>
