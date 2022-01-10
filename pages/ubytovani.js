@@ -1,4 +1,14 @@
-import { FaBath, FaBed, FaUtensils, FaWifi, FaBicycle } from "react-icons/fa";
+import Link from "next/link";
+import {
+  FaBath,
+  FaBed,
+  FaUtensils,
+  FaWifi,
+  FaBicycle,
+  FaWineGlassAlt,
+  FaCoffee,
+  FaIceCream,
+} from "react-icons/fa";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import SimpleSlider from "../components/slick/slider";
@@ -63,7 +73,7 @@ export default function ubytovani() {
             </div>
             Wifi
           </div>
-          <div className={styles.equip}>
+          <div className={styles.equipLast}>
             <div className={styles.icon}>
               <FaBicycle />
             </div>
@@ -92,6 +102,34 @@ export default function ubytovani() {
           vrchů při pravém břehu vodní nádrže Nové Mlýny asi 8 km severně od
           Mikulova. Hlavním zdrojem bohatství obce vždy bylo vinařství.
         </p>
+      </div>
+      <div className={styles.container}>
+        <h2>Vinařství Iris</h2>
+        <div className={styles.equipBox}>
+          <div className={styles.equip}>
+            <div className={styles.icon}>
+              <FaWineGlassAlt />
+            </div>
+            Degustace
+          </div>
+          <div className={styles.equip}>
+            <div className={styles.icon}>
+              <FaCoffee />
+            </div>
+            Káva
+          </div>
+          <div className={styles.equipLast}>
+            <div className={styles.icon}>
+              <FaIceCream />
+            </div>
+            Zmrzlina
+          </div>
+        </div>
+        <p className={styles.winery}>
+          Více informací o vinařství na{" "}
+          <Link href='https://vinarstviiris.cz'>vinarstviiris.cz</Link>
+        </p>
+        <p className={styles.winery}>Adresa: Podhradní 180, Pavlov 692 01</p>
       </div>
       <div className={styles.container} id='contact'>
         <h2>KONTAKTUJTE NÁS!</h2>

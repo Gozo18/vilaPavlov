@@ -46,7 +46,8 @@
   margin-top: 30px;
 }
 
-.equip {
+.equip,
+.equipLast {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,6 +55,20 @@
 
   .icon {
     font-size: 2rem;
+  }
+}
+
+.equipLast {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.winery {
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+    font-weight: bold;
   }
 }
 
