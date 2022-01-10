@@ -17,7 +17,7 @@ export default function ubytovani() {
           kopců.
         </p>
       </div>
-      <div className={styles.container}>
+      <div className={styles.container} id='price'>
         <h2>Ceník</h2>
         <div className={styles.priceBox}>
           <div>Dvoulůžkový apartmán za noc:</div>
@@ -36,7 +36,7 @@ export default function ubytovani() {
           <div className={styles.price}>zdarma</div>
         </div>
       </div>
-      <div className={styles.container}>
+      <div className={styles.container} id='equip'>
         <h2>Vybavení apartmánů</h2>
         <div className={styles.equipBox}>
           <div className={styles.equip}>
@@ -71,7 +71,7 @@ export default function ubytovani() {
           </div>
         </div>
       </div>
-      <div className={styles.gallery}>
+      <div className={styles.gallery} id='gallery'>
         <SimpleSlider />
       </div>
       <div className={styles.container}>
@@ -93,7 +93,7 @@ export default function ubytovani() {
           Mikulova. Hlavním zdrojem bohatství obce vždy bylo vinařství.
         </p>
       </div>
-      <div className={styles.container}>
+      <div className={styles.container} id='contact'>
         <h2>KONTAKTUJTE NÁS!</h2>
         <ContactForm />
         <div className={styles.space}></div>
