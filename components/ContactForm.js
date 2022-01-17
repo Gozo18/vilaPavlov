@@ -108,7 +108,7 @@ export default function ContactForm() {
       </div>
       <div className={styles.contactsBox}>
         <div>E-mail:</div>
-        <a href='mailto:jelinek82@gmail.com'>jelinek82@gmail.com</a>
+        <a href='mailto:info@vilapavlov.cz'>info@vilapavlov.cz</a>
       </div>
 
       <form onSubmit={handleSubmit} className={styles.form}>
