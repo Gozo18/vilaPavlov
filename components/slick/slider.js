@@ -23,7 +23,7 @@ export default function SimpleSlider() {
               src='/1.jpg'
               alt='vilaPavlov'
               layout='fill'
-              objectFit='contain'
+              objectFit='cover'
               priority
             />
           </span>
@@ -34,7 +34,7 @@ export default function SimpleSlider() {
               src='/3.jpg'
               alt='vilaPavlov'
               layout='fill'
-              objectFit='contain'
+              objectFit='cover'
               priority
             />
           </span>
