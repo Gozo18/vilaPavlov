@@ -1,13 +1,10 @@
 import Head from "next/head";
 import Header from "./Header";
-import Gta from "./Gta";
-import styles from "../styles/Layout.module.scss";
 
 export default function Layout({ title, keywords, description, children }) {
   return (
     <>
       <Head>
-        <Gta />
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='keywords' lang='cs' content={keywords}></meta>
