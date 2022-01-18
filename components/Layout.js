@@ -7,15 +7,15 @@ export default function Layout({ title, keywords, description, children }) {
   return (
     <>
       <Head>
+        <Gta />
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='keywords' lang='cs' content={keywords}></meta>
         <meta httpEquiv='content-language' content='cs'></meta>
         <link rel='icon' href='/favicon.ico' />
-        <Gta />
       </Head>
       <Header />
-      <div className={styles.container}>{children}</div>
+      <main>{children}</main>
     </>
   );
 }
