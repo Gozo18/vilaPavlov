@@ -20,7 +20,7 @@ export default function SimpleSlider() {
         <div className={styles.sliderItem}>
           <span className={styles.sliderImage}>
             <Image
-              src='/1.jpg'
+              src='/image0.jpg'
               alt='vilaPavlov'
               layout='fill'
               objectFit='cover'
@@ -31,7 +31,29 @@ export default function SimpleSlider() {
         <div className={styles.sliderItem}>
           <span className={styles.sliderImage}>
             <Image
-              src='/3.jpg'
+              src='/image1.jpg'
+              alt='vilaPavlov'
+              layout='fill'
+              objectFit='cover'
+              priority
+            />
+          </span>
+        </div>
+        <div className={styles.sliderItem}>
+          <span className={styles.sliderImage}>
+            <Image
+              src='/image5.jpg'
+              alt='vilaPavlov'
+              layout='fill'
+              objectFit='cover'
+              priority
+            />
+          </span>
+        </div>
+        <div className={styles.sliderItem}>
+          <span className={styles.sliderImage}>
+            <Image
+              src='/image6.jpg'
               alt='vilaPavlov'
               layout='fill'
               objectFit='cover'
