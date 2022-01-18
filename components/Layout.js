@@ -11,6 +11,22 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name='keywords' lang='cs' content={keywords}></meta>
         <meta httpEquiv='content-language' content='cs'></meta>
         <link rel='icon' href='/favicon.ico' />
+
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=UA-48767601-12'
+        ></script>
+        <script>
+          dangerouslySetInnerHTML=
+          {{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-48767601-12', { page_path: window.location.pathname });
+            `,
+          }}
+        </script>
       </Head>
       <Header />
       <div className={styles.container}>{children}</div>
