@@ -4,7 +4,7 @@ import styles from "../styles/Layout.module.scss";
 
 export default function Layout({ title, keywords, description, children }) {
   return (
-    <html lang='cs'>
+    <>
       <Head>
         <title>{title}</title>
         <meta name='description' content={description} />
@@ -14,7 +14,7 @@ export default function Layout({ title, keywords, description, children }) {
       </Head>
       <Header />
       <div className={styles.container}>{children}</div>
-    </html>
+    </>
   );
 }
 
