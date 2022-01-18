@@ -117,15 +117,15 @@ export default function ContactForm() {
         <div className={styles.formLine}>
           <label htmlFor='fullname'>
             Jméno<span>*</span>
+            <input
+              type='text'
+              value={fullname}
+              onChange={(e) => {
+                setFullname(e.target.value);
+              }}
+              name='fullname'
+            />
           </label>
-          <input
-            type='text'
-            value={fullname}
-            onChange={(e) => {
-              setFullname(e.target.value);
-            }}
-            name='fullname'
-          />
           {errors?.fullname && (
             <div className={styles.emptyError}>Prosím, vyplňte!</div>
           )}
@@ -134,15 +134,15 @@ export default function ContactForm() {
         <div className={styles.formLine}>
           <label htmlFor='email'>
             E-mail<span>*</span>
+            <input
+              type='email'
+              name='email'
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
           </label>
-          <input
-            type='email'
-            name='email'
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
           {errors?.email && (
             <div className={styles.emptyError}>Prosím, vyplňte!</div>
           )}
@@ -151,15 +151,15 @@ export default function ContactForm() {
         <div className={styles.formLine}>
           <label htmlFor='subject'>
             Předmět<span>*</span>
+            <input
+              type='text'
+              name='subject'
+              value={subject}
+              onChange={(e) => {
+                setSubject(e.target.value);
+              }}
+            />
           </label>
-          <input
-            type='text'
-            name='subject'
-            value={subject}
-            onChange={(e) => {
-              setSubject(e.target.value);
-            }}
-          />
           {errors?.subject && (
             <div className={styles.emptyError}>Prosím, vyplňte!</div>
           )}
@@ -168,14 +168,14 @@ export default function ContactForm() {
         <div className={styles.formLine}>
           <label htmlFor='message'>
             Váš vzkaz<span>*</span>
+            <textarea
+              name='message'
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+            ></textarea>
           </label>
-          <textarea
-            name='message'
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-          ></textarea>
           {errors?.message && (
             <div className={styles.emptyError}>Prosím, vyplňte!</div>
           )}
