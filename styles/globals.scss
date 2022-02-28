@@ -61,3 +61,37 @@ h3 {
   margin: 0 auto;
   max-width: 920px;
 }
+
+.gameContainer {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1200px;
+  height: 100vh;
+  background: #e6e6e6;
+
+  h1 {
+    margin: 0;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .userBox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .userName {
+    width: 20%;
+    font-size: 1.8rem;
+  }
+
+  .userInput {
+    width: 10%;
+    background: #fff;
+    border: 0;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+  }
+}

@@ -13,8 +13,6 @@ import styles from "../styles/Header.module.scss";
 export default function Header() {
   const router = useRouter();
 
-  console.log(router.route);
-
   return (
     <header className={styles.header}>
       {router.route === "/" ? (
