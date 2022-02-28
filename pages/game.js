@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProgressBar from "../components/progress-bar";
 
-function game() {
+function Game() {
   const [users, setUsers] = useState({
     Pavel: 0,
     Marek: 0,
@@ -306,4 +306,4 @@ function game() {
   );
 }
 
-export default game;
+export default Game;
