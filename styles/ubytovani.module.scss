@@ -3,7 +3,9 @@
 .container {
   margin: 4vh 5%;
   padding: 4vh 7%;
-  background-color: $bg;
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 15px;
 
   @media (min-width: $md) {
     padding: 4vh 15%;

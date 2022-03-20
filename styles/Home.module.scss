@@ -10,7 +10,9 @@
   padding: 10vh 10%;
   width: 90%;
   height: 92vh;
-  background-color: $bg;
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 15px;
 
   h1 {
     margin: 0;
