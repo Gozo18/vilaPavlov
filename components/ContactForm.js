@@ -66,7 +66,7 @@ export default function ContactForm() {
 
       const { error } = await res.json();
       if (error) {
-        console.log(error);
+        /* console.log(error); */
         setShowSuccessMessage(false);
         setShowFailureMessage(true);
         setButtonText("Odeslat");
@@ -87,7 +87,7 @@ export default function ContactForm() {
       setMessage("");
       setSubject("");
     }
-    console.log(fullname, email, subject, message);
+    /* console.log(fullname, email, subject, message); */
   };
 
   return (
