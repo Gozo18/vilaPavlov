@@ -7,7 +7,7 @@ export default function Home() {
     <Layout>
       <div className={styles.bottleBox}>
         <h1>vilaPavlov</h1>
-        <h2>ubytování na Pálavě</h2>
+        <h2>ubytování v Pavlově na Pálavě</h2>
 
         <span>
           <Image
