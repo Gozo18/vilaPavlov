@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Header from "./Header";
-import Gtag from "./Gtag";
 
 export default function Layout({ title, keywords, description, children }) {
   return (
@@ -11,7 +10,6 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name='keywords' lang='cs' content={keywords}></meta>
         <meta httpEquiv='content-language' content='cs'></meta>
         <link rel='icon' href='/favicon.ico' />
-        <Gtag />
       </Head>
       <Header />
       <main>{children}</main>
