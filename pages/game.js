@@ -3,21 +3,25 @@ import ProgressBar from "../components/progress-bar";
 
 function Game() {
   const [users, setUsers] = useState({
-    Pavel: 0,
-    Marek: 0,
-    Ema: 0,
+    Maty: 0,
     Filip: 0,
-    Tereza: 0,
-    Ondra: 0,
-    Žaneta: 0,
+    KájaZ: 0,
+    OndraS: 0,
+    Maruška: 0,
+    Michal: 0,
+    Kryštof: 0,
+    Linda: 0,
+    Vašík: 0,
+    Anička: 0,
     Adam: 0,
-    Laura: 0,
-    Dan: 0,
-    Tom: 0,
-    Natálka: 0,
-    Pepa: 0,
-    Sofie: 0,
-    Vasil: 0,
+    Barča: 0,
+    OndraG: 0,
+    Elenka: 0,
+    Šimon: 0,
+    KájaS: 0,
+    Švrček: 0,
+    Škrobák: 0,
+    Kuba: 0,
   });
 
   const onClick = (e) => {
@@ -35,233 +39,20 @@ function Game() {
       <div className='userBox'>
         <div
           className='userName'
-          value={users.Tereza}
+          value={users.Maty}
           onClick={onClick}
-          id='Tereza'
+          id='Maty'
         >
-          Tereza
+          Maty
         </div>
         <input
           type='number'
-          value={users.Tereza}
+          value={users.Maty}
           onClick={onClick}
-          id='Tereza'
+          id='Maty'
           className='userInput'
         />
-        <ProgressBar bgcolor='#6a1b9a' completed={users.Tereza} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Ondra}
-          onClick={onClick}
-          id='Ondra'
-        >
-          Ondra
-        </div>
-        <input
-          type='number'
-          value={users.Ondra}
-          onClick={onClick}
-          id='Ondra'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#c2b501' completed={users.Ondra} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Žaneta}
-          onClick={onClick}
-          id='Žaneta'
-        >
-          Žaneta
-        </div>
-        <input
-          type='number'
-          value={users.Žaneta}
-          onClick={onClick}
-          id='Žaneta'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#ff9a01' completed={users.Žaneta} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Adam}
-          onClick={onClick}
-          id='Adam'
-        >
-          Adam
-        </div>
-        <input
-          type='number'
-          value={users.Adam}
-          onClick={onClick}
-          id='Adam'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#003d03' completed={users.Adam} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Laura}
-          onClick={onClick}
-          id='Laura'
-        >
-          Laura
-        </div>
-        <input
-          type='number'
-          value={users.Laura}
-          onClick={onClick}
-          id='Laura'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#fa497e' completed={users.Laura} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div className='userName' value={users.Dan} onClick={onClick} id='Dan'>
-          Dan
-        </div>
-        <input
-          type='number'
-          value={users.Dan}
-          onClick={onClick}
-          id='Dan'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#495bfa' completed={users.Dan} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Dan}
-          onClick={onClick}
-          id='Sofie'
-        >
-          Sofie
-        </div>
-        <input
-          type='number'
-          value={users.Sofie}
-          onClick={onClick}
-          id='Sofie'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#49f4fa' completed={users.Sofie} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Vasil}
-          onClick={onClick}
-          id='Vasil'
-        >
-          Vasil
-        </div>
-        <input
-          type='number'
-          value={users.Vasil}
-          onClick={onClick}
-          id='Vasil'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#38fc41' completed={users.Vasil} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Pepa}
-          onClick={onClick}
-          id='Pepa'
-        >
-          Pepa
-        </div>
-        <input
-          type='number'
-          value={users.Pepa}
-          onClick={onClick}
-          id='Pepa'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#464646' completed={users.Pepa} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Natálka}
-          onClick={onClick}
-          id='Natálka'
-        >
-          Natálka
-        </div>
-        <input
-          type='number'
-          value={users.Natálka}
-          onClick={onClick}
-          id='Natálka'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#ff0101' completed={users.Natálka} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div className='userName' value={users.Tom} onClick={onClick} id='Tom'>
-          Tom
-        </div>
-        <input
-          type='number'
-          value={users.Tom}
-          onClick={onClick}
-          id='Tom'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#00b84c' completed={users.Tom} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div
-          className='userName'
-          value={users.Pavel}
-          onClick={onClick}
-          id='Pavel'
-        >
-          Pavel
-        </div>
-        <input
-          type='number'
-          value={users.Pavel}
-          onClick={onClick}
-          id='Pavel'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#0212e9' completed={users.Pavel} />
-      </div>
-      <hr />
-      <div className='userBox'>
-        <div className='userName' value={users.Ema} onClick={onClick} id='Ema'>
-          Ema
-        </div>
-        <input
-          type='number'
-          value={users.Ema}
-          onClick={onClick}
-          id='Ema'
-          className='userInput'
-        />
-        <ProgressBar bgcolor='#ff009d' completed={users.Ema} />
+        <ProgressBar bgcolor='#38fc41' completed={users.Maty} />
       </div>
       <hr />
       <div className='userBox'>
@@ -280,26 +71,319 @@ function Game() {
           id='Filip'
           className='userInput'
         />
-        <ProgressBar bgcolor='#5b00d3' completed={users.Filip} />
+        <ProgressBar bgcolor='#c2b501' completed={users.Filip} />
       </div>
       <hr />
       <div className='userBox'>
         <div
           className='userName'
-          value={users.Marek}
+          value={users.KájaZ}
           onClick={onClick}
-          id='Marek'
+          id='KájaZ'
         >
-          Marek
+          KájaZ
         </div>
         <input
           type='number'
-          value={users.Marek}
+          value={users.KájaZ}
           onClick={onClick}
-          id='Marek'
+          id='KájaZ'
           className='userInput'
         />
-        <ProgressBar bgcolor='#570f0f' completed={users.Marek} />
+        <ProgressBar bgcolor='#ff9a01' completed={users.KájaZ} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.OndraS}
+          onClick={onClick}
+          id='OndraS'
+        >
+          OndraS
+        </div>
+        <input
+          type='number'
+          value={users.OndraS}
+          onClick={onClick}
+          id='OndraS'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#003d03' completed={users.OndraS} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Maruška}
+          onClick={onClick}
+          id='Maruška'
+        >
+          Maruška
+        </div>
+        <input
+          type='number'
+          value={users.Maruška}
+          onClick={onClick}
+          id='Maruška'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#fa497e' completed={users.Maruška} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div className='userName' value={users.Michal} onClick={onClick} id='Michal'>
+        Michal
+        </div>
+        <input
+          type='number'
+          value={users.Michal}
+          onClick={onClick}
+          id='Michal'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#495bfa' completed={users.Michal} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Kryštof}
+          onClick={onClick}
+          id='Kryštof'
+        >
+          Kryštof
+        </div>
+        <input
+          type='number'
+          value={users.Kryštof}
+          onClick={onClick}
+          id='Kryštof'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#49f4fa' completed={users.Kryštof} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Linda}
+          onClick={onClick}
+          id='Linda'
+        >
+          Linda
+        </div>
+        <input
+          type='number'
+          value={users.Linda}
+          onClick={onClick}
+          id='Linda'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#6a1b9a' completed={users.Linda} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Vašík}
+          onClick={onClick}
+          id='Vašík'
+        >
+          Vašík
+        </div>
+        <input
+          type='number'
+          value={users.Vašík}
+          onClick={onClick}
+          id='Vašík'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#464646' completed={users.Vašík} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Anička}
+          onClick={onClick}
+          id='Anička'
+        >
+          Anička
+        </div>
+        <input
+          type='number'
+          value={users.Anička}
+          onClick={onClick}
+          id='Anička'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#ff0101' completed={users.Anička} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div className='userName' value={users.Adam} onClick={onClick} id='Adam'>
+        Adam
+        </div>
+        <input
+          type='number'
+          value={users.Adam}
+          onClick={onClick}
+          id='Adam'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#00b84c' completed={users.Adam} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Barča}
+          onClick={onClick}
+          id='Barča'
+        >
+          Barča
+        </div>
+        <input
+          type='number'
+          value={users.Barča}
+          onClick={onClick}
+          id='Barča'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#0212e9' completed={users.Barča} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div className='userName' value={users.OndraG} onClick={onClick} id='OndraG'>
+        OndraG
+        </div>
+        <input
+          type='number'
+          value={users.OndraG}
+          onClick={onClick}
+          id='OndraG'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#c15b5b' completed={users.OndraG} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Elenka}
+          onClick={onClick}
+          id='Elenka'
+        >
+          Elenka
+        </div>
+        <input
+          type='number'
+          value={users.Elenka}
+          onClick={onClick}
+          id='Elenka'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#5b00d3' completed={users.Elenka} />
+      </div>
+      <hr />
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Šimon}
+          onClick={onClick}
+          id='Šimon'
+        >
+          Šimon
+        </div>
+        <input
+          type='number'
+          value={users.Šimon}
+          onClick={onClick}
+          id='Šimon'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#570f0f' completed={users.Šimon} />
+      </div>
+      <hr />
+
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.KájaS}
+          onClick={onClick}
+          id='KájaS'
+        >
+          KájaS
+        </div>
+        <input
+          type='number'
+          value={users.KájaS}
+          onClick={onClick}
+          id='KájaS'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#ff0eaa' completed={users.KájaS} />
+      </div>
+      <hr />
+
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Švrček}
+          onClick={onClick}
+          id='Švrček'
+        >
+          Švrček
+        </div>
+        <input
+          type='number'
+          value={users.Švrček}
+          onClick={onClick}
+          id='Švrček'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#2cdd00' completed={users.Švrček} />
+      </div>
+      <hr />
+
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Škrobák}
+          onClick={onClick}
+          id='Škrobák'
+        >
+          Škrobák
+        </div>
+        <input
+          type='number'
+          value={users.Škrobák}
+          onClick={onClick}
+          id='Škrobák'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#ffca0c' completed={users.Škrobák} />
+      </div>
+      <hr />
+
+      <div className='userBox'>
+        <div
+          className='userName'
+          value={users.Kuba}
+          onClick={onClick}
+          id='Kuba'
+        >
+          Kuba
+        </div>
+        <input
+          type='number'
+          value={users.Kuba}
+          onClick={onClick}
+          id='Kuba'
+          className='userInput'
+        />
+        <ProgressBar bgcolor='#2933a5' completed={users.Kuba} />
       </div>
       <hr />
     </div>
