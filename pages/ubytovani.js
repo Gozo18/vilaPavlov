@@ -31,15 +31,15 @@ export default function ubytovani() {
         <h2>Ceník</h2>
         <div className={styles.priceBox}>
           <div>Dvoulůžkový apartmán za noc:</div>
-          <div className={styles.price}>1.500,- Kč</div>
+          <div className={styles.price}>1.900,- Kč</div>
         </div>
         <div className={styles.priceBox}>
           <div>Jednolůžkový apartmán za noc:</div>
-          <div className={styles.price}>1.000,- Kč</div>
+          <div className={styles.price}>1.500,- Kč</div>
         </div>
         <div className={styles.priceBox}>
           <div>Čtyřlůžkový apartmán za noc:</div>
-          <div className={styles.price}>3.000,- Kč</div>
+          <div className={styles.price}>3.800,- Kč</div>
         </div>
         <div className={styles.priceBox}>
           <div>Děti bez nároku na vlastní postel:</div>
