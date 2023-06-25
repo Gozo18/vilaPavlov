@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 import {
   FaBath,
   FaBed,
@@ -8,11 +8,11 @@ import {
   FaWineGlassAlt,
   FaCoffee,
   FaIceCream,
-} from "react-icons/fa";
-import ContactForm from "../components/ContactForm";
-import Layout from "../components/Layout";
-import SimpleSlider from "../components/slick/slider";
-import styles from "../styles/ubytovani.module.scss";
+} from "react-icons/fa"
+import ContactForm from "../components/ContactForm"
+import Layout from "../components/Layout"
+import SimpleSlider from "../components/slick/slider"
+import styles from "../styles/ubytovani.module.scss"
 
 export default function ubytovani() {
   return (
@@ -27,26 +27,26 @@ export default function ubytovani() {
           kopců.
         </p>
       </div>
-      <div className={styles.container} id='price'>
+      <div className={styles.container} id="price">
         <h2>Ceník</h2>
         <div className={styles.priceBox}>
           <div>Dvoulůžkový apartmán za noc:</div>
-          <div className={styles.price}>1.900,- Kč</div>
+          <div className={styles.price}>od 1.500,- Kč</div>
         </div>
         <div className={styles.priceBox}>
           <div>Jednolůžkový apartmán za noc:</div>
-          <div className={styles.price}>1.500,- Kč</div>
+          <div className={styles.price}>od 1.100,- Kč</div>
         </div>
         <div className={styles.priceBox}>
           <div>Čtyřlůžkový apartmán za noc:</div>
-          <div className={styles.price}>3.800,- Kč</div>
+          <div className={styles.price}>od 3.000,- Kč</div>
         </div>
         <div className={styles.priceBox}>
           <div>Děti bez nároku na vlastní postel:</div>
           <div className={styles.price}>zdarma</div>
         </div>
       </div>
-      <div className={styles.container} id='equip'>
+      <div className={styles.container} id="equip">
         <h2>Vybavení apartmánů</h2>
         <div className={styles.equipBox}>
           <div className={styles.equip}>
@@ -81,7 +81,7 @@ export default function ubytovani() {
           </div>
         </div>
       </div>
-      <div className={styles.gallery} id='gallery'>
+      <div className={styles.gallery} id="gallery">
         <SimpleSlider />
       </div>
       <div className={styles.container}>
@@ -127,15 +127,15 @@ export default function ubytovani() {
         </div>
         <p className={styles.winery}>
           Více informací o vinařství na{" "}
-          <Link href='https://vinarstviiris.cz'>vinarstviiris.cz</Link>
+          <Link href="https://vinarstviiris.cz">vinarstviiris.cz</Link>
         </p>
         <p className={styles.winery}>Adresa: Podhradní 180, Pavlov 692 01</p>
       </div>
-      <div className={styles.container} id='contact'>
+      <div className={styles.container} id="contact">
         <h2>KONTAKTUJTE NÁS!</h2>
         <ContactForm />
         <div className={styles.space}></div>
       </div>
     </Layout>
-  );
+  )
 }
