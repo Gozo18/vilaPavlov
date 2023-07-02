@@ -1,56 +1,56 @@
-import { useState } from "react";
-import styles from "../styles/ContactForm.module.scss";
+import { useState } from "react"
+import styles from "../styles/ContactForm.module.scss"
 
 export default function ContactForm() {
-  const [fullname, setFullname] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [fullname, setFullname] = useState("")
+  const [email, setEmail] = useState("")
+  const [subject, setSubject] = useState("")
+  const [message, setMessage] = useState("")
 
   //   Form validation
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({})
 
   //   Setting button text
-  const [buttonText, setButtonText] = useState("Odeslat");
+  const [buttonText, setButtonText] = useState("Odeslat")
 
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [showFailureMessage, setShowFailureMessage] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+  const [showFailureMessage, setShowFailureMessage] = useState(false)
 
   const handleValidation = () => {
-    let tempErrors = {};
-    let isValid = true;
+    let tempErrors = {}
+    let isValid = true
 
     if (fullname.length <= 0) {
-      tempErrors["fullname"] = true;
-      isValid = false;
+      tempErrors["fullname"] = true
+      isValid = false
     }
     if (email.length <= 0) {
-      tempErrors["email"] = true;
-      isValid = false;
+      tempErrors["email"] = true
+      isValid = false
     }
     if (subject.length <= 0) {
-      tempErrors["subject"] = true;
-      isValid = false;
+      tempErrors["subject"] = true
+      isValid = false
     }
     if (message.length <= 0) {
-      tempErrors["message"] = true;
-      isValid = false;
+      tempErrors["message"] = true
+      isValid = false
     }
 
-    setErrors({ ...tempErrors });
-    console.log("errors", errors);
-    return isValid;
-  };
+    setErrors({ ...tempErrors })
+    console.log("errors", errors)
+    return isValid
+  }
 
   //   const [form, setForm] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    let isValidForm = handleValidation();
+    let isValidForm = handleValidation()
 
     if (isValidForm) {
-      setButtonText("Odesílám");
+      setButtonText("Odesílám")
       const res = await fetch("/api/sendgrid", {
         body: JSON.stringify({
           email: email,
@@ -62,33 +62,33 @@ export default function ContactForm() {
           "Content-Type": "application/json",
         },
         method: "POST",
-      });
+      })
 
-      const { error } = await res.json();
+      const { error } = await res.json()
       if (error) {
         /* console.log(error); */
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText("Odeslat");
+        setShowSuccessMessage(false)
+        setShowFailureMessage(true)
+        setButtonText("Odeslat")
 
         // Reset form fields
-        setFullname("");
-        setEmail("");
-        setMessage("");
-        setSubject("");
-        return;
+        setFullname("")
+        setEmail("")
+        setMessage("")
+        setSubject("")
+        return
       }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setButtonText("Odeslat");
+      setShowSuccessMessage(true)
+      setShowFailureMessage(false)
+      setButtonText("Odeslat")
       // Reset form fields
-      setFullname("");
-      setEmail("");
-      setMessage("");
-      setSubject("");
+      setFullname("")
+      setEmail("")
+      setMessage("")
+      setSubject("")
     }
     /* console.log(fullname, email, subject, message); */
-  };
+  }
 
   return (
     <div>
@@ -100,30 +100,30 @@ export default function ContactForm() {
       </div>
       <div className={styles.contactsBox}>
         <div>Telefon:</div>
-        <a href='tel:+420602172230'>+420 602 172 230</a>
+        <a href="tel:+420602172230">+420 602 172 230</a>
       </div>
       <div className={styles.contactsBox}>
         <div>Telefon:</div>
-        <a href='tel:+420723284232'>+420 723 284 232</a>
+        <a href="tel:+420723284232">+420 723 284 232</a>
       </div>
       <div className={styles.contactsBox}>
         <div>E-mail:</div>
-        <a href='mailto:info@vilapavlov.cz'>info@vilapavlov.cz</a>
+        <a href="mailto:info@vilapavlov.cz">info@vilapavlov.cz</a>
       </div>
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <p>Pošlete nám Váš dotaz</p>
 
         <div className={styles.formLine}>
-          <label htmlFor='fullname'>
+          <label>
             Jméno<span>*</span>
             <input
-              type='text'
+              type="text"
               value={fullname}
               onChange={(e) => {
-                setFullname(e.target.value);
+                setFullname(e.target.value)
               }}
-              name='fullname'
+              name="fullname"
             />
           </label>
           {errors?.fullname && (
@@ -132,14 +132,14 @@ export default function ContactForm() {
         </div>
 
         <div className={styles.formLine}>
-          <label htmlFor='email'>
+          <label>
             E-mail<span>*</span>
             <input
-              type='email'
-              name='email'
+              type="email"
+              name="email"
               value={email}
               onChange={(e) => {
-                setEmail(e.target.value);
+                setEmail(e.target.value)
               }}
             />
           </label>
@@ -149,14 +149,14 @@ export default function ContactForm() {
         </div>
 
         <div className={styles.formLine}>
-          <label htmlFor='subject'>
+          <label>
             Předmět<span>*</span>
             <input
-              type='text'
-              name='subject'
+              type="text"
+              name="subject"
               value={subject}
               onChange={(e) => {
-                setSubject(e.target.value);
+                setSubject(e.target.value)
               }}
             />
           </label>
@@ -166,13 +166,13 @@ export default function ContactForm() {
         </div>
 
         <div className={styles.formLine}>
-          <label htmlFor='message'>
+          <label>
             Váš vzkaz<span>*</span>
             <textarea
-              name='message'
+              name="message"
               value={message}
               onChange={(e) => {
-                setMessage(e.target.value);
+                setMessage(e.target.value)
               }}
             ></textarea>
           </label>
@@ -181,9 +181,9 @@ export default function ContactForm() {
           )}
         </div>
 
-        <button type='submit'>{buttonText}</button>
+        <button type="submit">{buttonText}</button>
 
-        <div className='text-left'>
+        <div className="text-left">
           {showSuccessMessage && (
             <div className={styles.sendingSuccess}>
               Děkujeme, e-mail byl odeslán.
@@ -197,5 +197,5 @@ export default function ContactForm() {
         </div>
       </form>
     </div>
-  );
+  )
 }
