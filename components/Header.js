@@ -1,23 +1,22 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
+import { useRouter } from "next/router"
+import Link from "next/link"
 import {
   FaHome,
   FaWineBottle,
   FaMoneyBillAlt,
-  FaArchive,
   FaImage,
   FaPhone,
-} from "react-icons/fa";
-import styles from "../styles/Header.module.scss";
+} from "react-icons/fa"
+import styles from "../styles/Header.module.scss"
 
 export default function Header() {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <header className={styles.header}>
       {router.route === "/" ? (
         <div className={styles.headerBox}>
-          <Link href='/ubytovani'>
+          <Link href="/ubytovani">
             <a className={styles.home}>
               <div className={styles.iconBox}>
                 <div className={styles.iconCircle}>
@@ -27,7 +26,7 @@ export default function Header() {
               Ubytování
             </a>
           </Link>
-          <Link href='https://vinarstviiris.cz'>
+          <Link href="https://vinarstviiris.cz">
             <a className={styles.wine}>
               <div className={styles.iconBox}>
                 <div className={styles.iconCircle}>
@@ -40,7 +39,7 @@ export default function Header() {
         </div>
       ) : (
         <div className={styles.headerBox}>
-          <Link href='/ubytovani#price' scrollSmooth>
+          <Link href="/ubytovani#price" scrollSmooth>
             <a className={styles.home}>
               <div className={styles.iconBox}>
                 <div className={styles.iconCircle}>
@@ -50,17 +49,7 @@ export default function Header() {
               Ceny za noc
             </a>
           </Link>
-          {/* <Link href='/ubytovani#equip' scrollSmooth>
-            <a className={styles.home}>
-              <div className={styles.iconBox}>
-                <div className={styles.iconCircle}>
-                  <FaArchive />
-                </div>
-              </div>
-              Vybavení
-            </a>
-          </Link> */}
-          <Link href='/ubytovani#gallery' scrollSmooth>
+          <Link href="/ubytovani#gallery" scrollSmooth>
             <a className={styles.home}>
               <div className={styles.iconBox}>
                 <div className={styles.iconCircle}>
@@ -70,7 +59,7 @@ export default function Header() {
               Galerie
             </a>
           </Link>
-          <Link href='/ubytovani#contact' scrollSmooth>
+          <Link href="/ubytovani#contact" scrollSmooth>
             <a className={styles.home}>
               <div className={styles.iconBox}>
                 <div className={styles.iconCircle}>
@@ -83,5 +72,5 @@ export default function Header() {
         </div>
       )}
     </header>
-  );
+  )
 }
