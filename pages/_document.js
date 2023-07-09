@@ -47,6 +47,34 @@ class MyDocument extends Document {
 `,
             }}
           />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Hotel",
+                name: "vila Pavlov",
+                description:
+                  "Skoukromé ubytování ve vinařské obci Pavlov na úbočí Pálavských vrchů a nad Mušovskými jezery.",
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "CZ",
+                  addressLocality: "Pavlov",
+                  addressRegion: "Jižní Morava",
+                  postalCode: "69201",
+                  streetAddress: "Zahradní 287",
+                },
+                telephone: "+420 602 172 230",
+                photo:
+                  "https://www.vilapavlov.cz/_next/image?url=%2Fimage0.jpg&w=1920&q=75",
+                starRating: {
+                  "@type": "Rating",
+                  ratingValue: "3",
+                },
+                priceRange: "1.500,- Kč - 1.900,- Kč",
+              }),
+            }}
+          />
         </Head>
         <body>
           <Main />
