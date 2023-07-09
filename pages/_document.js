@@ -67,6 +67,8 @@ class MyDocument extends Document {
                 telephone: "+420 602 172 230",
                 photo:
                   "https://www.vilapavlov.cz/_next/image?url=%2Fimage0.jpg&w=1920&q=75",
+                image:
+                  "https://www.vilapavlov.cz/_next/image?url=%2Fimage0.jpg&w=1920&q=75",
                 starRating: {
                   "@type": "Rating",
                   ratingValue: "3",
