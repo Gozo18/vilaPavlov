@@ -10,6 +10,11 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="keywords" lang="cs" content={keywords}></meta>
         <meta httpEquiv="content-language" content="cs"></meta>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="canonical"
+          href="https://www.vilapavlov.cz"
+          key="canonical"
+        />
       </Head>
       <Header />
       <main>{children}</main>
