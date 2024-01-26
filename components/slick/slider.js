@@ -1,8 +1,8 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
-import styles from "../../styles/Slider.module.scss";
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import Image from "next/image"
+import styles from "../../styles/Slider.module.scss"
 
 export default function SimpleSlider() {
   const settings = {
@@ -12,7 +12,7 @@ export default function SimpleSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-  };
+  }
 
   return (
     <div className={styles.sliderBlock}>
@@ -20,10 +20,10 @@ export default function SimpleSlider() {
         <div className={styles.sliderItem}>
           <span className={styles.sliderImage}>
             <Image
-              src='/image0.jpg'
-              alt='vilaPavlov'
-              layout='fill'
-              objectFit='cover'
+              src="/image0.webp"
+              alt="vilaPavlov"
+              layout="fill"
+              objectFit="cover"
               priority
             />
           </span>
@@ -31,10 +31,10 @@ export default function SimpleSlider() {
         <div className={styles.sliderItem}>
           <span className={styles.sliderImage}>
             <Image
-              src='/image1.jpg'
-              alt='vilaPavlov'
-              layout='fill'
-              objectFit='cover'
+              src="/image1.webp"
+              alt="vilaPavlov"
+              layout="fill"
+              objectFit="cover"
               priority
             />
           </span>
@@ -42,10 +42,10 @@ export default function SimpleSlider() {
         <div className={styles.sliderItem}>
           <span className={styles.sliderImage}>
             <Image
-              src='/image5.jpg'
-              alt='vilaPavlov'
-              layout='fill'
-              objectFit='cover'
+              src="/image3.webp"
+              alt="vilaPavlov"
+              layout="fill"
+              objectFit="cover"
               priority
             />
           </span>
@@ -53,15 +53,48 @@ export default function SimpleSlider() {
         <div className={styles.sliderItem}>
           <span className={styles.sliderImage}>
             <Image
-              src='/image6.jpg'
-              alt='vilaPavlov'
-              layout='fill'
-              objectFit='cover'
+              src="/image4.webp"
+              alt="vilaPavlov"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </span>
+        </div>
+        <div className={styles.sliderItem}>
+          <span className={styles.sliderImage}>
+            <Image
+              src="/image5.webp"
+              alt="vilaPavlov"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </span>
+        </div>
+        <div className={styles.sliderItem}>
+          <span className={styles.sliderImage}>
+            <Image
+              src="/image6.jpg"
+              alt="vilaPavlov"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </span>
+        </div>
+        <div className={styles.sliderItem}>
+          <span className={styles.sliderImage}>
+            <Image
+              src="/image7.jpg"
+              alt="vilaPavlov"
+              layout="fill"
+              objectFit="cover"
               priority
             />
           </span>
         </div>
       </Slider>
     </div>
-  );
+  )
 }

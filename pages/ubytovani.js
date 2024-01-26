@@ -8,6 +8,7 @@ import {
   FaWineGlassAlt,
   FaCoffee,
   FaIceCream,
+  FaParking,
 } from "react-icons/fa"
 import ContactForm from "../components/ContactForm"
 import Layout from "../components/Layout"
@@ -73,11 +74,17 @@ export default function ubytovani() {
             </div>
             Wifi
           </div>
-          <div className={styles.equipLast}>
+          <div className={styles.equip}>
             <div className={styles.icon}>
               <FaBicycle />
             </div>
             Úschovna kol
+          </div>
+          <div className={styles.equip}>
+            <div className={styles.icon}>
+              <FaParking />
+            </div>
+            Parkování
           </div>
         </div>
       </div>
