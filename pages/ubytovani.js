@@ -13,6 +13,7 @@ import {
 import ContactForm from "../components/ContactForm"
 import Layout from "../components/Layout"
 import SimpleSlider from "../components/slick/slider"
+import Gallery from "../components/Gallery"
 import styles from "../styles/ubytovani.module.scss"
 
 export default function ubytovani() {
@@ -89,7 +90,8 @@ export default function ubytovani() {
         </div>
       </div>
       <div className={styles.gallery} id="gallery">
-        <SimpleSlider />
+        {/* <SimpleSlider /> */}
+        <Gallery />
       </div>
       <div className={styles.container}>
         <h2>Staráme se, aby se Vám v Pavlově líbilo.</h2>
