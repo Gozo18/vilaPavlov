@@ -23,8 +23,9 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-  title: "vilaPavlov | ubytování Pavlov",
+  title: "ubytování Pavlov | vilaPavlov",
   description:
     "Vila Pavlov Vám nabízí ubytování v penzionu v malebné vesnici Pavlov s výraznou vinařskou tradicí.",
-  keywords: "ubytování Pavlov, ubytování pod Pálavou, penzion Pavlov",
+  keywords:
+    "ubytování Pavlov, ubytování pod Pálavou, penzion Pavlov, ubytovani Pavlov",
 }

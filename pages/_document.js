@@ -73,7 +73,7 @@ class MyDocument extends Document {
                   "@type": "Rating",
                   ratingValue: "3",
                 },
-                priceRange: "1.500,- Kč - 1.900,- Kč",
+                priceRange: "1.700,- Kč - 1.900,- Kč",
               }),
             }}
           />
