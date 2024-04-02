@@ -20,19 +20,19 @@ export default function ContactForm() {
     let tempErrors = {}
     let isValid = true
 
-    if (fullname.length <= 0) {
+    if (fullname.length <= 0 || fullname == undefined) {
       tempErrors["fullname"] = true
       isValid = false
     }
-    if (email.length <= 0) {
+    if (email.length <= 0 || email == undefined) {
       tempErrors["email"] = true
       isValid = false
     }
-    if (subject.length <= 0) {
+    if (subject.length <= 0 || subject == undefined) {
       tempErrors["subject"] = true
       isValid = false
     }
-    if (message.length <= 0) {
+    if (message.length <= 0 || message == undefined) {
       tempErrors["message"] = true
       isValid = false
     }
