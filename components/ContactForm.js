@@ -181,7 +181,9 @@ export default function ContactForm() {
           )}
         </div>
 
-        <button type="submit">{buttonText}</button>
+        <button type="submit" style={{ cursor: "pointer" }}>
+          {buttonText}
+        </button>
 
         <div className="text-left">
           {showSuccessMessage && (
