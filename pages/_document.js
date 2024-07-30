@@ -77,6 +77,10 @@ class MyDocument extends Document {
               }),
             }}
           />
+          <script
+            async
+            src="https://cmp.osano.com/6oay2UK1ynNO3g5l/d8390b36-ba13-4a73-b8c8-33f2bb317d3b/osano.js"
+          ></script>
         </Head>
         <body>
           <Main />
