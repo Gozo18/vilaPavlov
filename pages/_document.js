@@ -79,8 +79,12 @@ class MyDocument extends Document {
           />
           <script
             async
-            src="https://cmp.osano.com/6oay2UK1ynNO3g5l/d8390b36-ba13-4a73-b8c8-33f2bb317d3b/osano.js"
-          ></script>
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="90a93f73-b850-4682-a779-5cfd6d06c51d"
+            data-blockingmode="auto"
+            type="text/javascript"
+          />
         </Head>
         <body>
           <Main />
