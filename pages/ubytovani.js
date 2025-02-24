@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa"
 import ContactForm from "../components/ContactForm"
 import Layout from "../components/Layout"
-import SimpleSlider from "../components/slick/slider"
+/* import SimpleSlider from "../components/slick/slider" */
 import Gallery from "../components/Gallery"
 import styles from "../styles/ubytovani.module.scss"
 
@@ -20,7 +20,10 @@ export default function ubytovani() {
   return (
     <Layout>
       <div className={styles.container}>
-        <h1>vilaPavlov</h1>
+        <h1>
+          vilaPavlov <br />
+          <span>ubytování v penzionu</span>
+        </h1>
         <p>
           Náš penzion je novostavba nacházející se v malebné obci Pavlov na
           úbočí Pálavských vrchů a nad Mušovskými jezery. Máme pro Vás
@@ -30,7 +33,7 @@ export default function ubytovani() {
         </p>
       </div>
       <div className={styles.container} id="price">
-        <h2>Ceník</h2>
+        <h2>Ceník ubytování</h2>
         <div className={styles.priceBox}>
           <div>Dvoulůžkový apartmán za noc:</div>
           <div className={styles.price}>od 1.700,- Kč</div>
