@@ -94,7 +94,7 @@ export default function ContactForm() {
     <div>
       <div className={styles.addressBox}>
         <p>Neváhejte nám napsat nebo zavolat.</p>
-        <h3>vilaPavlov</h3>
+        <h3 className={styles.addressHeader}>vilaPavlov</h3>
         <p>Zahradní 287</p>
         <p>Pavlov, 692 01</p>
       </div>
