@@ -35,19 +35,19 @@ export default function ubytovani() {
       <div className={styles.container} id="price">
         <h2>Ceník ubytování</h2>
         <div className={styles.priceBox}>
-          <div>Dvoulůžkový apartmán za noc:</div>
+          <div>Dvoulůžkový apartmán za noc</div>
           <div className={styles.price}>od 1.700,- Kč</div>
         </div>
         <div className={styles.priceBox}>
-          <div>Jednolůžkový apartmán za noc:</div>
+          <div>Jednolůžkový apartmán za noc</div>
           <div className={styles.price}>od 1.500,- Kč</div>
         </div>
         <div className={styles.priceBox}>
-          <div>Čtyřlůžkový apartmán za noc:</div>
+          <div>Čtyřlůžkový apartmán za noc</div>
           <div className={styles.price}>od 3.400,- Kč</div>
         </div>
         <div className={styles.priceBox}>
-          <div>Děti bez nároku na vlastní postel:</div>
+          <div>Děti bez nároku na vlastní postel</div>
           <div className={styles.price}>zdarma</div>
         </div>
       </div>

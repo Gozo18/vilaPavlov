@@ -6,24 +6,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 4vh 5%;
-  padding: 10vh 10%;
-  width: 90%;
+  margin: 2vh 2%;
+  padding: 10vh 2%;
+  width: 96%;
   height: 92vh;
   background-color: $white;
   border: 1px solid $border;
   border-radius: 5px;
 
+  @media (min-width: $md) {
+    margin: 4vh 5%;
+    padding: 10vh 10%;
+  }
+
   h1 {
     margin: 0;
     font-family: "Kaushan Script", cursive;
-    font-size: 3rem;
+    font-size: 4rem;
+
+    @media (min-width: $md) {
+      font-size: 3rem;
+    }
   }
 
   h2 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: normal;
+
+    @media (min-width: $md) {
+      font-size: 1rem;
+    }
   }
 
   .logo {
