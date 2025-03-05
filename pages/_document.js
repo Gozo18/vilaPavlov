@@ -11,6 +11,21 @@ class MyDocument extends Document {
       <Html lang='cs'>
         <Head>
           <script
+            async
+            src='https://www.googletagmanager.com/gtag/js?id=G-YVNCKZL7K6'
+          />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YVNCKZL7K6', { page_path: window.location.pathname });
+            `,
+            }}
+          />
+          <script
             type='application/ld+json'
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
