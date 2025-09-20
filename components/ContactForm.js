@@ -2,92 +2,39 @@ import { useState } from "react"
 import styles from "../styles/ContactForm.module.scss"
 
 export default function ContactForm() {
-  const [fullname, setFullname] = useState("")
-  const [email, setEmail] = useState("")
-  const [subject, setSubject] = useState("")
-  const [message, setMessage] = useState("")
-
-  //   Form validation
-  const [errors, setErrors] = useState({})
-
-  //   Setting button text
-  const [buttonText, setButtonText] = useState("Odeslat")
-
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
-  const [showFailureMessage, setShowFailureMessage] = useState(false)
-
-  const handleValidation = () => {
-    let tempErrors = {}
-    let isValid = true
-
-    if (fullname.length <= 0 || fullname == undefined) {
-      tempErrors["fullname"] = true
-      isValid = false
-    }
-    if (email.length <= 0 || email == undefined) {
-      tempErrors["email"] = true
-      isValid = false
-    }
-    if (subject.length <= 0 || subject == undefined) {
-      tempErrors["subject"] = true
-      isValid = false
-    }
-    if (message.length <= 0 || message == undefined) {
-      tempErrors["message"] = true
-      isValid = false
-    }
-
-    setErrors({ ...tempErrors })
-    console.log("errors", errors)
-    return isValid
-  }
-
-  //   const [form, setForm] = useState(false);
+  const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState(null)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
+    setStatus(null)
 
-    let isValidForm = handleValidation()
-
-    if (isValidForm) {
-      setButtonText("Odesílám")
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email: email,
-          fullname: fullname,
-          subject: subject,
-          message: message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      })
-
-      const { error } = await res.json()
-      if (error) {
-        /* console.log(error); */
-        setShowSuccessMessage(false)
-        setShowFailureMessage(true)
-        setButtonText("Odeslat")
-
-        // Reset form fields
-        setFullname("")
-        setEmail("")
-        setMessage("")
-        setSubject("")
-        return
-      }
-      setShowSuccessMessage(true)
-      setShowFailureMessage(false)
-      setButtonText("Odeslat")
-      // Reset form fields
-      setFullname("")
-      setEmail("")
-      setMessage("")
-      setSubject("")
+    const form = e.target
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
     }
-    /* console.log(fullname, email, subject, message); */
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+
+    const result = await res.json()
+    setLoading(false)
+
+    if (result.success) {
+      setStatus("Zpráva byla úspěšně odeslána ✅")
+      form.reset()
+    } else {
+      setStatus("Nastala chyba při odesílání ❌")
+    }
   }
 
   return (
@@ -117,86 +64,36 @@ export default function ContactForm() {
         <div className={styles.formLine}>
           <label>
             Jméno<span>*</span>
-            <input
-              type="text"
-              value={fullname}
-              onChange={(e) => {
-                setFullname(e.target.value)
-              }}
-              name="fullname"
-            />
+            <input type="text" name="fullname" required />
           </label>
-          {errors?.fullname && (
-            <div className={styles.emptyError}>Prosím, vyplňte!</div>
-          )}
         </div>
 
         <div className={styles.formLine}>
           <label>
             E-mail<span>*</span>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value)
-              }}
-            />
+            <input type="email" name="email" required />
           </label>
-          {errors?.email && (
-            <div className={styles.emptyError}>Prosím, vyplňte!</div>
-          )}
         </div>
 
         <div className={styles.formLine}>
           <label>
             Předmět<span>*</span>
-            <input
-              type="text"
-              name="subject"
-              value={subject}
-              onChange={(e) => {
-                setSubject(e.target.value)
-              }}
-            />
+            <input type="text" name="subject" required />
           </label>
-          {errors?.subject && (
-            <div className={styles.emptyError}>Prosím, vyplňte!</div>
-          )}
         </div>
 
         <div className={styles.formLine}>
           <label>
             Váš vzkaz<span>*</span>
-            <textarea
-              name="message"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value)
-              }}
-            ></textarea>
+            <textarea name="message" required></textarea>
           </label>
-          {errors?.message && (
-            <div className={styles.emptyError}>Prosím, vyplňte!</div>
-          )}
         </div>
 
-        <button type="submit" style={{ cursor: "pointer" }}>
-          {buttonText}
+        <button type="submit" style={{ cursor: "pointer" }} disabled={loading}>
+          {loading ? "Odesílám..." : "Odeslat"}
         </button>
 
-        <div className="text-left">
-          {showSuccessMessage && (
-            <div className={styles.sendingSuccess}>
-              Děkujeme, e-mail byl odeslán.
-            </div>
-          )}
-          {showFailureMessage && (
-            <div className={styles.sendingError}>
-              Něco se pokazilo. Zkuste to znovu!
-            </div>
-          )}
-        </div>
+        {status && <p className="text-sm">{status}</p>}
       </form>
     </div>
   )
