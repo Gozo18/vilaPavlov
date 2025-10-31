@@ -15,6 +15,10 @@ const photos = [
   { src: "../image8.jpg", width: 1080, height: 1080 },
   { src: "../image9.jpg", width: 1080, height: 1080 },
   { src: "../image10.jpg", width: 1080, height: 1080 },
+  { src: "../image11.jpg", width: 1080, height: 1080 },
+  { src: "../image12.jpg", width: 1080, height: 1080 },
+  { src: "../image13.jpg", width: 1080, height: 1080 },
+  { src: "../image14.jpg", width: 1080, height: 1080 },
 ]
 
 export default function App() {
