@@ -1,7 +1,6 @@
 import Link from "next/link"
 import {
   FaBath,
-  FaBed,
   FaUtensils,
   FaWifi,
   FaBicycle,
@@ -9,6 +8,7 @@ import {
   FaCoffee,
   FaIceCream,
   FaParking,
+  FaSnowflake,
 } from "react-icons/fa"
 import ContactForm from "../components/ContactForm"
 import Layout from "../components/Layout"
@@ -68,9 +68,9 @@ export default function ubytovani() {
           </div>
           <div className={styles.equip}>
             <div className={styles.icon}>
-              <FaBed />
+              <FaSnowflake />
             </div>
-            Postle z masivu
+            Klimatizace
           </div>
           <div className={styles.equip}>
             <div className={styles.icon}>
